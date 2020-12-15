@@ -1,0 +1,27 @@
+.btn {
+    padding: 16px 32px 16px 64px;
+    border: none;
+    border-radius: 3px;
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+    cursor: pointer;
+    position:relative;
+    text-decoration: none;
+    
+    .icon {
+        filter: invert(1);
+        position:absolute;
+        left: 24px;
+        top:50%;
+        transform:translateY(-50%);
+        
+    }
+
+    &.primary {
+        color: #fff;
+        background: $primary;
+
+        &:hover {
+            background: lighten($primary, 7.5%);
+        }
+    }
+}
