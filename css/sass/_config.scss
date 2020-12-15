@@ -11,8 +11,9 @@
 }
 
 body {
-    background-color: $mainGrey;
-    height:100%;
+    background: url('../../assets/images/gradient_background.jpg') center/cover no-repeat;
+    min-height:100vh;
     width:100vw;
     font-family: 'Segoe UI', Helvetica, sans-serif;
+    overflow-x: hidden;
 }
