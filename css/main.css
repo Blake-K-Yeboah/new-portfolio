@@ -91,9 +91,36 @@ body {
   color: #EE6B29;
 }
 
+.navbar .menu-icon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  display: none;
+}
+
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1112px) {
+  .navbar {
+    padding: 0 5vw;
+  }
+  .navbar .nav-list {
+    display: none;
+  }
+  .navbar .menu-icon {
+    display: block;
+  }
+}
+
 .header-grid {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   -ms-grid-columns: 3fr 2fr;
       grid-template-columns: 3fr 2fr;
   position: relative;
@@ -108,11 +135,7 @@ body {
 }
 
 .header-grid .img-container .header-img {
-  position: absolute;
-  top: 40%;
-  right: 10vw;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  margin: 8em 0 0 -10em;
   width: 100%;
 }
 
