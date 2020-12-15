@@ -1,0 +1,53 @@
+@import 'variables';
+
+.navbar {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10vw;
+    line-height: 150px;
+
+    .navbar-brand {
+        font-family: 'Shadows Into Light Two', serif;
+        color: #fff;
+        font-weight: normal;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    .nav-list {
+        display:flex;
+        flex-direction: row;
+        list-style: none;
+
+        .nav-item {
+            margin: 0 1em;
+
+            .nav-link {
+                text-transform:uppercase;
+                color: $lightGrey;
+                text-decoration: none;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                transition: color 0.3s ease-in-out;
+                cursor: pointer;
+                
+                &.light {
+                    font-weight: lighter;
+                }
+
+                &.active {
+                    color: $primary;
+                }
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
