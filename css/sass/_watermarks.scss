@@ -1,0 +1,14 @@
+// Import Variables
+@import './variables';
+
+.watermark {
+    color: $primary;
+    font-weight: 900;
+    font-size: 161px;
+    text-transform: uppercase;
+    position:absolute;
+    z-index:-1;
+    top: 10vh;
+    left:-10px;
+    opacity: 0.03;
+}
