@@ -1,5 +1,5 @@
 .header-grid {
-    display:grid;
+    display:none; // for testing purposes
     grid-template-columns: 3fr 2fr;
     position:relative;
     width: 100vw;
@@ -11,10 +11,8 @@
         position:relative;
 
         .header-img {
-            position:absolute;
-            top:40%;
-            right: 10vw;
-            transform:translateY(-50%);
+            margin: 8em 0 0 -10em;
+
             width: 100%;
         }
     }
