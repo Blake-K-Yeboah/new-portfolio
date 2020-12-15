@@ -1,0 +1,43 @@
+.header-grid {
+    display:grid;
+    grid-template-columns: 3fr 2fr;
+    position:relative;
+    width: 100vw;
+    height:84vh;
+
+    .img-container {
+        height:100%;
+        width:100%;
+        position:relative;
+
+        .header-img {
+            position:absolute;
+            top:40%;
+            right: 10vw;
+            transform:translateY(-50%);
+            width: 100%;
+        }
+    }
+
+    .content {
+        padding: 0 10vw;
+        width: 100%;
+        margin-top: 17.5vh;
+
+        .header-title {
+            color: #fff;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 2vh;
+        }
+
+        .header-content {
+            width:80%;
+            font-size: 1.35rem;
+            margin-bottom: 6vh;
+            line-height: 1.75;
+            color: $lightGrey;
+            font-family: 'EB Garamond', serif;
+        }
+    }
+}
