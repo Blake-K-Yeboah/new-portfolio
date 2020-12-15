@@ -1,1 +1,27 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Shadows+Into+Light+Two&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #2f2f2b;
+  height: 100%;
+  width: 100vw;
+  font-family: 'Segoe UI', Helvetica, sans-serif;
+}
+
+.watermark {
+  color: #EE6B29;
+  font-weight: 900;
+  font-size: 161px;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: -1;
+  top: 10vh;
+  left: -10px;
+  opacity: 0.03;
+}
+/*# sourceMappingURL=main.css.map */
