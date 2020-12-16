@@ -1,5 +1,5 @@
 .header-grid {
-    display:none; // for testing purposes
+    display:grid; 
     grid-template-columns: 3fr 2fr;
     position:relative;
     width: 100vw;
@@ -24,18 +24,105 @@
 
         .header-title {
             color: #fff;
-            font-size: 3.5rem;
+            font-size: 3vw;
             font-weight: 600;
             margin-bottom: 2vh;
         }
 
         .header-content {
             width:80%;
-            font-size: 1.35rem;
+            font-size: 1.25vw;
             margin-bottom: 6vh;
             line-height: 1.75;
             color: $lightGrey;
             font-family: 'EB Garamond', serif;
+        }
+    }
+}
+
+@media screen and (max-width: 1208px) {
+    .header-grid {
+        .img-container .header-img {
+            margin: 8em 0 0 -5em;
+        }
+
+        .content {
+            .header-content {
+                margin-bottom: 4vh;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1112px) {
+    .header-grid .content {
+        padding: 0 5vw;
+    }
+}
+@media screen and (max-width: 932px) {
+    .header-grid {
+        grid-template-columns: 1fr;
+        height: 80vh;
+
+        .content {
+            margin-top: 5vh;
+
+            .header-title {
+                text-align:center;
+                font-size: 2.5rem;
+            }
+
+            .header-content {
+                text-align:center;
+                font-size: 1.25rem;
+                margin: 0 auto 4vh auto;
+                width: 65%;
+            }
+
+            .btn {
+                position: absolute;
+                left:50%;
+                transform:translateX(-50%);
+            }
+        }
+
+        .img-container .header-img {
+            margin: 0;
+            position:absolute;
+            left:50%;
+            bottom: 10vh;
+            transform:translateX(-50%);
+            width:50%;
+        }
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .header-grid {
+        .content {
+            margin-top: 0;
+
+            .header-title {
+                font-size: 2rem;
+            }
+
+            .header-content {
+                font-size: 1rem;
+            }
+        }
+
+        .img-container .header-img {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-height: 652px) {
+    .header-grid {
+        margin-top: -25px;
+
+        .img-container .header-img {
+            bottom: 5vh;
         }
     }
 }
