@@ -65,6 +65,41 @@
     top:0;
     left:0;
     z-index: 1;
+    display:none;
+
+    .close-icon {
+        color: #fff;
+        font-size: 2rem;
+        position:absolute;
+        right: 5vw;
+        top: 6vh;
+    }
+
+    .nav-list {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .nav-item {
+            margin: 1em 0;
+
+            .nav-link {
+                text-transform:uppercase;
+                color: $lightGrey;
+                text-decoration: none;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                transition: color 0.3s ease-in-out;
+                cursor: pointer;
+
+                &.active {
+                    color: $primary;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1112px) {
@@ -77,6 +112,14 @@
 
         .menu-icon {
             display:block;
+        }
+    }
+}
+
+@media screen and (max-width: 662px) {
+    .navbar {
+        .navbar-brand {
+            font-size: 2rem;
         }
     }
 }
