@@ -55,11 +55,53 @@
             
         </ul>
 
-        <img src="/assets/icons/menu.svg" alt="Menu Icon" class="menu-icon">
+        <img src="/assets/icons/menu.svg" alt="Menu Icon" class="menu-icon" id="menu-icon">
 
     </nav>
 
     <section class="mobile-menu">
+
+        <span class="close-icon" id="close-icon">&times;</span>
+
+        <ul class="nav-list">
+
+            <li class="nav-item">
+
+                <a href="/" class="nav-link active">Home</a>
+
+            </li>
+            
+            <li class="nav-item">
+
+                <a href="/projects" class="nav-link">Projects</a>
+
+            </li>
+            
+            <li class="nav-item">
+
+                <a href="/skills" class="nav-link">Skills</a>
+
+            </li>
+            
+            <li class="nav-item">
+
+                <a href="/about" class="nav-link">About</a>
+
+            </li>
+            
+            <li class="nav-item">
+
+                <a href="/contact" class="nav-link light">Contact</a>
+
+            </li>
+            
+            <li class="nav-item">
+
+                <a href="#" class="nav-link light">Resume</a>
+
+            </li>
+            
+        </ul>
 
     </section>
     
@@ -92,13 +134,24 @@
 
     <script>
         
-        /*
+        // LOAD IN ANIMATION
         let tl = gsap.timeline({defaults:{duration:1.5}});
 
         tl.from('.navbar-brand', { opacity:0, y: -100 })
           .from('.nav-item', { opacity: 0, x: -30, stagger: 0.25 }, '-=1.5')
-          .from('.content', { opacity: 0, x: -100 }, '-=2')
-          .from('.header-img', { opacity: 0, x: 100 }, '-=1.5') */
+          .from('.content', { opacity: 0, x: -100 }, '-=2.5')
+          .from('.header-img', { opacity: 0, x: 100 }, '-=2')
+
+        // Mobile Navigation
+        document.getElementById("menu-icon").addEventListener('click', () => {
+            document.querySelector('.mobile-menu').style.display = "block";
+            gsap.from('.mobile-menu', { opacity: 0, duration: 1.5 });
+            gsap.from('.mobile-menu .nav-item', { x: 50, duration: 1, opacity: 0, stagger: 0.25 });
+        });
+
+        document.getElementById("close-icon").addEventListener('click', () => {
+            document.querySelector('.mobile-menu').style.display = "none";            
+        });
 
     </script>
 
