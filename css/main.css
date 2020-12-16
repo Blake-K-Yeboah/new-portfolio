@@ -29,6 +29,33 @@ body {
   left: -10px;
 }
 
+@media screen and (max-width: 1112px) {
+  .watermark {
+    font-size: 121px;
+  }
+  .watermark.home {
+    top: 20vh;
+  }
+}
+
+@media screen and (max-width: 692px) {
+  .watermark {
+    font-size: 81px;
+  }
+  .watermark.home {
+    top: 17.5vh;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .watermark {
+    font-size: 61px;
+  }
+  .watermark.home {
+    top: 18.5vh;
+  }
+}
+
 .navbar {
   height: 150px;
   display: -webkit-box;
@@ -105,6 +132,51 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+  display: none;
+}
+
+.mobile-menu .close-icon {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  right: 5vw;
+  top: 6vh;
+}
+
+.mobile-menu .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.mobile-menu .nav-list .nav-item {
+  margin: 1em 0;
+}
+
+.mobile-menu .nav-list .nav-item .nav-link {
+  text-transform: uppercase;
+  color: #D6D6D6;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.mobile-menu .nav-list .nav-item .nav-link.active {
+  color: #EE6B29;
 }
 
 @media screen and (max-width: 1112px) {
@@ -119,8 +191,15 @@ body {
   }
 }
 
+@media screen and (max-width: 662px) {
+  .navbar .navbar-brand {
+    font-size: 2rem;
+  }
+}
+
 .header-grid {
-  display: none;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: 3fr 2fr;
       grid-template-columns: 3fr 2fr;
   position: relative;
@@ -147,18 +226,93 @@ body {
 
 .header-grid .content .header-title {
   color: #fff;
-  font-size: 3.5rem;
+  font-size: 3vw;
   font-weight: 600;
   margin-bottom: 2vh;
 }
 
 .header-grid .content .header-content {
   width: 80%;
-  font-size: 1.35rem;
+  font-size: 1.25vw;
   margin-bottom: 6vh;
   line-height: 1.75;
   color: #D6D6D6;
   font-family: 'EB Garamond', serif;
+}
+
+@media screen and (max-width: 1208px) {
+  .header-grid .img-container .header-img {
+    margin: 8em 0 0 -5em;
+  }
+  .header-grid .content .header-content {
+    margin-bottom: 4vh;
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  .header-grid .content {
+    padding: 0 5vw;
+  }
+}
+
+@media screen and (max-width: 932px) {
+  .header-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: 80vh;
+  }
+  .header-grid .content {
+    margin-top: 5vh;
+  }
+  .header-grid .content .header-title {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .header-grid .content .header-content {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0 auto 4vh auto;
+    width: 65%;
+  }
+  .header-grid .content .btn {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .header-grid .img-container .header-img {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 10vh;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 432px) {
+  .header-grid .content {
+    margin-top: 0;
+  }
+  .header-grid .content .header-title {
+    font-size: 2rem;
+  }
+  .header-grid .content .header-content {
+    font-size: 1rem;
+  }
+  .header-grid .img-container .header-img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-height: 652px) {
+  .header-grid {
+    margin-top: -25px;
+  }
+  .header-grid .img-container .header-img {
+    bottom: 5vh;
+  }
 }
 
 .btn {
@@ -189,5 +343,28 @@ body {
 
 .btn.primary:hover {
   background: #f1844c;
+}
+
+@media screen and (max-width: 1374px) {
+  .btn {
+    padding: 12px 24px 12px 48px;
+    font-size: 1.1vw;
+  }
+  .btn .icon {
+    width: 1.5vw;
+    left: 16px;
+    width: 2vw;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .btn {
+    padding: 16px 32px 16px 64px;
+    font-size: .85rem;
+  }
+  .btn .icon {
+    width: 20px;
+    left: 24px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
