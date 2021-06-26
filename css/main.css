@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Shadows+Into+Light+Two&display=swap");
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #3B3B37;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #EE6B29;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +21,43 @@ body {
   width: 100vw;
   font-family: 'Segoe UI', Helvetica, sans-serif;
   overflow-x: hidden;
+}
+
+.page-heading {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  font-size: 2.75rem;
+  letter-spacing: 3px;
+}
+
+.heading-divider {
+  width: 150px;
+  height: 7px;
+  border-radius: 9999px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: .5em;
+}
+
+.heading-divider .one, .heading-divider .two, .heading-divider .three {
+  width: 33.3%;
+  height: 100%;
+}
+
+.heading-divider .one {
+  background-color: #FF7E3D;
+  border-radius: 99px 0 0 99px;
+}
+
+.heading-divider .two {
+  background-color: #ca6330;
+}
+
+.heading-divider .three {
+  background-color: #b4582b;
+  border-radius: 0 99px 99px 0;
 }
 
 .watermark {
@@ -122,6 +168,8 @@ body {
   -webkit-filter: invert(1);
           filter: invert(1);
   display: none;
+  width: 40px;
+  margin-top: -15px;
 }
 
 .mobile-menu {
@@ -280,14 +328,21 @@ body {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+  .header-grid .img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .header-grid .img-container .header-img {
     margin: 0;
-    position: absolute;
-    left: 50%;
-    bottom: 10vh;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
     width: 50%;
+    min-width: 300px;
   }
 }
 
@@ -334,6 +389,10 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: -webkit-filter .3s ease-in-out;
+  transition: -webkit-filter .3s ease-in-out;
+  transition: filter .3s ease-in-out;
+  transition: filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
 }
 
 .btn.primary {
@@ -343,6 +402,27 @@ body {
 
 .btn.primary:hover {
   background: #f1844c;
+}
+
+.btn.primary-outline {
+  color: #EE6B29;
+  border: 2px solid #EE6B29;
+  padding: 14px 30px 14px 62px;
+}
+
+.btn.primary-outline .icon {
+  -webkit-filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
+          filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
+}
+
+.btn.primary-outline:hover {
+  background: #EE6B29;
+  color: #fff;
+}
+
+.btn.primary-outline:hover .icon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 @media screen and (max-width: 1374px) {
@@ -366,5 +446,164 @@ body {
     width: 20px;
     left: 24px;
   }
+}
+
+.projects {
+  padding: 5vh 10vw;
+}
+
+.projects .project {
+  width: 100%;
+  margin-top: 7.5vh;
+  min-height: 55vh;
+  background-color: #30302c;
+  border-left: 10px solid #EE6B29;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 4em;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.projects .project .img-container {
+  width: 100%;
+  height: calc(55vh - 8em);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .project .img-container .project-img {
+  width: 100%;
+  border-radius: 10px;
+  opacity: .95;
+}
+
+.projects .project .content {
+  width: 100%;
+}
+
+.projects .project .content .project-title {
+  font-size: 2.25rem;
+  color: #fff;
+}
+
+.projects .project .content .project-description {
+  color: #ccc;
+  width: 80%;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 1em 0;
+}
+
+.projects .project .content .skills-heading {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.projects .project .content .skills-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1em 1em;
+  width: 90%;
+  margin: 1em 0 3em 0;
+}
+
+.projects .project .content .skills-list .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects .project .content .skills-list .skill .checkmark {
+  width: 32.5px;
+}
+
+.projects .project .content .skills-list .skill .skill-title {
+  font-size: 1.2rem;
+  color: #eee;
+  margin-left: .5em;
+  font-weight: lighter;
+}
+
+.projects .project .content .skills-list.smaller {
+  width: 75%;
+}
+
+.projects .project .content .btn-group .btn:last-of-type {
+  margin-left: 1em;
+}
+
+.projects .project.alternate {
+  border-left: none;
+  border-right: 10px solid #EE6B29;
+}
+
+.projects .project.alternate .content {
+  text-align: right;
+}
+
+.projects .project.alternate .content .project-description, .projects .project.alternate .content .skills-list {
+  margin-left: auto;
+}
+
+.projects .project.alternate .content .skills-list .skill {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer {
+  background-color: #30302c;
+  min-height: 100px;
+  margin-top: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10vw;
+}
+
+.footer .copyright-text {
+  font-size: 1.1rem;
+  color: #ddd;
+  font-weight: lighter;
+}
+
+.footer .social-icons .social-icon-link {
+  margin: 0 .5em;
+}
+
+.footer .social-icons .social-icon-link .icon {
+  -webkit-filter: invert(0.7);
+          filter: invert(0.7);
+  -webkit-transition: -webkit-filter .3s ease-in-out;
+  transition: -webkit-filter .3s ease-in-out;
+  transition: filter .3s ease-in-out;
+  transition: filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
+}
+
+.footer .social-icons .social-icon-link .icon:hover {
+  -webkit-filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
+          filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
 }
 /*# sourceMappingURL=main.css.map */
