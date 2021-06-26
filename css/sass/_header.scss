@@ -86,13 +86,16 @@
             }
         }
 
-        .img-container .header-img {
-            margin: 0;
-            position:absolute;
-            left:50%;
-            bottom: 10vh;
-            transform:translateX(-50%);
-            width:50%;
+        .img-container {
+            display:flex;
+            align-items:center;
+            justify-content: center;
+
+            .header-img {
+                margin: 0;
+                width:50%;
+                min-width:300px;
+            }
         }
     }
 }
