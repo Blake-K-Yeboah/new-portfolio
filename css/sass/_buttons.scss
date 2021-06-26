@@ -13,6 +13,7 @@
         left: 24px;
         top:50%;
         transform:translateY(-50%);
+        transition: filter .3s ease-in-out;
     }
 
     &.primary {
@@ -21,6 +22,24 @@
 
         &:hover {
             background: lighten($primary, 7.5%);
+        }
+    }
+
+    &.primary-outline {
+        color: $primary;
+        border: 2px solid $primary;
+        padding: 14px 30px 14px 62px;
+
+        .icon {
+            filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
+        }
+
+        &:hover {
+            background: $primary;
+            color: #fff;
+            .icon {
+                filter: invert(1);
+            }
         }
     }
 }
