@@ -4,6 +4,17 @@
 // Import Variables
 @import './variables';
 
+// Scrollbar
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #3B3B37;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $primary;
+}
+
+// Base Styles
 * {
     margin:0;
     padding: 0;
@@ -16,4 +27,39 @@ body {
     width:100vw;
     font-family: 'Segoe UI', Helvetica, sans-serif;
     overflow-x: hidden;
+}
+
+.page-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    font-size: 2.75rem;
+    letter-spacing: 3px;
+}
+
+.heading-divider {
+    width: 150px;
+    height: 7px;
+    border-radius:9999px;
+    display:flex;
+    margin-top: .5em;
+
+    .one, .two, .three {
+        width: 33.3%;
+        height: 100%;
+    }
+
+    .one {
+        background-color: #FF7E3D;
+        border-radius: 99px 0 0 99px;
+    }
+
+    .two {
+        background-color: #ca6330;
+    }
+
+    .three {
+        background-color: #b4582b;
+        border-radius:  0 99px 99px 0;
+    }
 }
