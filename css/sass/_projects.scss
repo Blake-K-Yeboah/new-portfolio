@@ -1,0 +1,106 @@
+.projects {
+    padding: 5vh 10vw;
+
+    .project {
+        width:100%;
+        margin-top: 7.5vh;
+        min-height: 55vh;
+        background-color: #30302c;
+        border-left: 10px solid $primary;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 4em;
+        position:relative;
+        box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+
+        .img-container {
+            width:100%;
+            height:calc(55vh - 8em);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+            .project-img {
+                width:100%;
+                border-radius: 10px;
+                opacity: .95;
+            }
+        }
+
+        .content {
+            width: 100%;
+            
+            .project-title {
+                font-size: 2.25rem;
+                color: #fff;
+            }
+
+            .project-description {
+                color: #ccc;
+                width:80%;
+                font-weight: 400;
+                font-style:italic;
+                font-size: 1.25rem;
+                line-height: 1.5;
+                margin: 1em 0;
+            }
+
+            .skills-heading {
+                color: #fff;
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
+            .skills-list {
+                display:grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1em 1em;
+                width: 90%;
+                margin: 1em 0 3em 0;
+
+                .skill {
+                    display:flex;
+
+                    .checkmark {
+                        width: 32.5px;
+                    }
+
+                    .skill-title {
+                        font-size: 1.2rem;
+                        color: #eee;
+                        margin-left: .5em;
+                        font-weight: lighter;
+                    }
+                }
+
+                &.smaller {
+                    width: 75%;
+                }
+            }
+
+            .btn-group {
+
+                .btn:last-of-type {
+                    margin-left: 1em;
+                }
+            }
+        }
+
+        &.alternate {
+            border-left:none;
+            border-right: 10px solid $primary;
+
+            .content {
+                text-align:right;
+
+                .project-description, .skills-list {
+                    margin-left:auto;
+                }
+
+                .skills-list .skill {
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
