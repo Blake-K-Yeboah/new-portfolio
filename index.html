@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./assets/favicon.ico?" type="image/x-icon">
 </head>
+
 <body>
 
-    <span class="watermark home">Designer</span>
+    <span class="watermark home">Developer</span>
 
     <nav class="navbar">
 
@@ -22,37 +24,37 @@
                 <a href="/" class="nav-link active">Home</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="/projects" class="nav-link">Projects</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="/skills" class="nav-link">Skills</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="/about" class="nav-link">About</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="/contact" class="nav-link light">Contact</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="#" class="nav-link light">Resume</a>
 
             </li>
-            
+
         </ul>
 
         <img src="/assets/icons/menu.svg" alt="Menu Icon" class="menu-icon" id="menu-icon">
@@ -70,52 +72,53 @@
                 <a href="/" class="nav-link active">Home</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="/projects" class="nav-link">Projects</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="/skills" class="nav-link">Skills</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="/about" class="nav-link">About</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="/contact" class="nav-link light">Contact</a>
 
             </li>
-            
+
             <li class="nav-item">
 
                 <a href="#" class="nav-link light">Resume</a>
 
             </li>
-            
+
         </ul>
 
     </section>
-    
+
     <header class="header-grid">
 
         <div class="content">
 
-            <h1 class="header-title">Web Designer & Developer</h1>
+            <h1 class="header-title">Full Stack Developer</h1>
 
             <p class="header-content">
-                Hi, My name is Blake Yeboah and I'm a web designer and developer based in Brisbane, Australia. I design and program functional web applications that perform
+                I'm a full stack developer, blogger and self-motivated learner who loves building web applications. Hit
+                the button below to see what I can do for your business.
             </p>
 
-            <a class="btn primary" href="#">
+            <a class="btn primary" href="/projects">
                 <img src="/assets/icons/code.svg" alt="Arrow" class="icon">
                 <span class="text">See My Work</span>
             </a>
@@ -124,23 +127,26 @@
 
         <div class="img-container">
 
-            <img src="/assets/images/home_page_illustration.png" alt="Person Working at Desk Illustration" class="header-img">
+            <img src="/assets/images/home_page_illustration.png" alt="Person Working at Desk Illustration"
+                class="header-img">
 
         </div>
 
     </header>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
 
     <script>
-        
-        // LOAD IN ANIMATION
-        let tl = gsap.timeline({defaults:{duration:1.5}});
 
-        tl.from('.navbar-brand', { opacity:0, y: -100 })
-          .from('.nav-item', { opacity: 0, x: -30, stagger: 0.25 }, '-=1.5')
-          .from('.content', { opacity: 0, x: -100 }, '-=2.5')
-          .from('.header-img', { opacity: 0, x: 100 }, '-=2')
+        // LOAD IN ANIMATION
+        let tl = gsap.timeline({ defaults: { duration: 1.5 } });
+
+        tl.from('.navbar-brand', { opacity: 0, y: -100 })
+            .from('.nav-item', { opacity: 0, x: -30, stagger: 0.25 }, '-=1.5')
+            .from('.content', { opacity: 0, x: -100 }, '-=2.5')
+            .from('.header-img', { opacity: 0, x: 100 }, '-=2')
 
         // Mobile Navigation
         document.getElementById("menu-icon").addEventListener('click', () => {
@@ -150,10 +156,11 @@
         });
 
         document.getElementById("close-icon").addEventListener('click', () => {
-            document.querySelector('.mobile-menu').style.display = "none";            
+            document.querySelector('.mobile-menu').style.display = "none";
         });
 
     </script>
 
 </body>
+
 </html>
