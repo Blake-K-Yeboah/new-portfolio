@@ -1,0 +1,41 @@
+.skills {
+   padding: 5vh 10vw;
+
+   .skills-grid {
+      display: flex;
+      margin-top: 10vh;
+
+      .skill-group {
+         width: 33.3%;
+         display: flex;
+         align-items: center;
+
+         .icon {
+            height: 75px;
+            filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
+            margin-right: 1em;
+         }
+
+         .skill-group-title {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5em;
+         }
+
+         .skills-list {
+            display: flex;
+            width: 90%;
+            flex-wrap: wrap;
+
+            .skill {
+               color: #fff;
+               background-color: #3d3c3c;
+               padding: 6px 16px;
+               margin: 0.5em 1em 0.5em 0;
+               border-radius: 999px;
+            }
+         }
+      }
+   }
+}
