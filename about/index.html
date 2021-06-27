@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blake Yeboah - About</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../assets/favicon.ico?" type="image/x-icon">
+</head>
+
+<body>
+
+    <span class="watermark home">Who Am I</span>
+
+    <nav class="navbar">
+
+        <h1 class="navbar-brand"><span>Blake</span> Yeboah</h1>
+
+        <ul class="nav-list">
+
+            <li class="nav-item">
+
+                <a href="/" class="nav-link">Home</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/projects" class="nav-link">Projects</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/skills" class="nav-link">Skills</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/about" class="nav-link active">About</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/contact" class="nav-link light">Contact</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="#" class="nav-link light">Resume</a>
+
+            </li>
+
+        </ul>
+
+        <img src="/assets/icons/menu.svg" alt="Menu Icon" class="menu-icon" id="menu-icon">
+
+    </nav>
+
+    <section class="mobile-menu">
+
+        <span class="close-icon" id="close-icon">&times;</span>
+
+        <ul class="nav-list">
+
+            <li class="nav-item">
+
+                <a href="/" class="nav-link">Home</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/projects" class="nav-link">Projects</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/skills" class="nav-link">Skills</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/about" class="nav-link active">About</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/contact" class="nav-link light">Contact</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="#" class="nav-link light">Resume</a>
+
+            </li>
+
+        </ul>
+
+    </section>
+
+    <section class="about">
+
+        <h1 class="page-heading">About</h1>
+
+        <div class="heading-divider">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+
+        <div class="about-grid">
+            <div class="content">
+                <p class="text">My name is Blake Yeboah and I'm a full stack web developer who enjoys designing and programming web applications that exceed expectations. I've developed a strong passion for the software development industry over the years and love what I do.</p>
+                <div class="btn-container">
+                    <a href="/contact" class="btn primary">
+                        <img src="../assets/icons/mail.svg" alt="Envelope" class="icon">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+            <img src="../assets/images/about-picture.png" alt="Blake Yeboah" class="about-img">
+        </div>
+        
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
+    
+    <script>
+    
+        // Mobile Navigation
+        document.getElementById("menu-icon").addEventListener('click', () => {
+            document.querySelector('.mobile-menu').style.display = "block";
+            gsap.from('.mobile-menu', { opacity: 0, duration: 1.5 });
+            gsap.from('.mobile-menu .nav-item', { x: 50, duration: 1, opacity: 0, stagger: 0.25 });
+        });
+    
+        document.getElementById("close-icon").addEventListener('click', () => {
+            document.querySelector('.mobile-menu').style.display = "none";
+        });
+    
+    </script>
+    
+</body>
+    
+</html>
