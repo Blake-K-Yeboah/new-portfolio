@@ -590,21 +590,27 @@ body {
 }
 
 .footer .social-icons .social-icon-link {
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
 
 .footer .social-icons .social-icon-link .icon {
   -webkit-filter: invert(0.7);
           filter: invert(0.7);
-  -webkit-transition: -webkit-filter .3s ease-in-out;
-  transition: -webkit-filter .3s ease-in-out;
-  transition: filter .3s ease-in-out;
-  transition: filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
 }
 
 .footer .social-icons .social-icon-link .icon:hover {
   -webkit-filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
           filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
+}
+
+.footer.sticky {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
 
 .skills {
