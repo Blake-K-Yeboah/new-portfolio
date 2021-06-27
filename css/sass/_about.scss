@@ -1,0 +1,35 @@
+.about {
+   padding: 5vh 10vw;
+
+   .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .content {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+
+         .text {
+            color: #ccc;
+            width: 90%;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 1.5rem;
+            line-height: 1.5;
+         }
+
+         .btn-container {
+            margin-top: 3em;
+         }
+      }
+
+      .about-img {
+         position: relative;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 40%;
+         min-width: 300px;
+      }
+   }
+}
