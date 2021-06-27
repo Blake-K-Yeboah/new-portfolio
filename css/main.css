@@ -664,4 +664,50 @@ body {
   margin: 0.5em 1em 0.5em 0;
   border-radius: 999px;
 }
+
+.about {
+  padding: 5vh 10vw;
+}
+
+.about .about-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.about .about-grid .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .about-grid .content .text {
+  color: #ccc;
+  width: 90%;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.about .about-grid .content .btn-container {
+  margin-top: 3em;
+}
+
+.about .about-grid .about-img {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40%;
+  min-width: 300px;
+}
 /*# sourceMappingURL=main.css.map */
