@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blake Yeboah - Skills</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../assets/favicon.ico?" type="image/x-icon">
+</head>
+
+<body>
+
+    <span class="watermark home">My Skills</span>
+
+    <nav class="navbar">
+
+        <h1 class="navbar-brand"><span>Blake</span> Yeboah</h1>
+
+        <ul class="nav-list">
+
+            <li class="nav-item">
+
+                <a href="/" class="nav-link">Home</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/projects" class="nav-link">Projects</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/skills" class="nav-link active">Skills</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/about" class="nav-link">About</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/contact" class="nav-link light">Contact</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="#" class="nav-link light">Resume</a>
+
+            </li>
+
+        </ul>
+
+        <img src="/assets/icons/menu.svg" alt="Menu Icon" class="menu-icon" id="menu-icon">
+
+    </nav>
+
+    <section class="mobile-menu">
+
+        <span class="close-icon" id="close-icon">&times;</span>
+
+        <ul class="nav-list">
+
+            <li class="nav-item">
+
+                <a href="/" class="nav-link">Home</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/projects" class="nav-link">Projects</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/skills" class="nav-link active">Skills</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/about" class="nav-link">About</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="/contact" class="nav-link light">Contact</a>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a href="#" class="nav-link light">Resume</a>
+
+            </li>
+
+        </ul>
+
+    </section>
+
+    <section class="skills">
+
+        <h1 class="page-heading">Skills</h1>
+
+        <div class="heading-divider">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-group">
+                <img src="../assets/icons/monitor.svg" alt="Monitor Icon" class="icon">
+                <div class="content">
+                    <h3 class="skill-group-title">Front End</h3>
+                    <div class="skills-list">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">Sass</span>
+                        <span class="skill">Bootstrap</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Redux</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-group second">
+                <img src="../assets/icons/terminal.svg" alt="Monitor Icon" class="icon">
+                <div class="content">
+                    <h3 class="skill-group-title">Back End</h3>
+                    <div class="skills-list">
+                        <span class="skill">Node</span>
+                        <span class="skill">Express</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">GraphQL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-group third">
+                <img src="../assets/icons/tool.svg" alt="Monitor Icon" class="icon">
+                <div class="content">
+                    <h3 class="skill-group-title">Tools</h3>
+                    <div class="skills-list">
+                        <span class="skill">Visual Studio Code</span>
+                        <span class="skill">Git</span>
+                        <span class="skill">Github</span>
+                        <span class="skill">Yarn</span>
+                        <span class="skill">Typescript</span>
+                        <span class="skill">Jest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
+    
+    <script>
+    
+        // Mobile Navigation
+        document.getElementById("menu-icon").addEventListener('click', () => {
+            document.querySelector('.mobile-menu').style.display = "block";
+            gsap.from('.mobile-menu', { opacity: 0, duration: 1.5 });
+            gsap.from('.mobile-menu .nav-item', { x: 50, duration: 1, opacity: 0, stagger: 0.25 });
+        });
+    
+        document.getElementById("close-icon").addEventListener('click', () => {
+            document.querySelector('.mobile-menu').style.display = "none";
+        });
+    
+    </script>
+    
+</body>
+    
+</html>
