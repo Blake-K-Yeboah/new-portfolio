@@ -1,65 +1,70 @@
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Shadows+Into+Light+Two&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Shadows+Into+Light+Two&display=swap");
 
 // Import Variables
-@import './variables';
+@import "./variables";
 
 // Scrollbar
 ::-webkit-scrollbar {
-    width: 6px;
-    background-color: #3B3B37;
+   width: 6px;
+   background-color: #3b3b37;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: $primary;
+   background-color: $primary;
 }
 
 // Base Styles
 * {
-    margin:0;
-    padding: 0;
-    box-sizing:border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
 body {
-    background: url('../../assets/images/gradient_background.jpg') center/cover no-repeat;
-    min-height:100vh;
-    width:100vw;
-    font-family: 'Segoe UI', Helvetica, sans-serif;
-    overflow-x: hidden;
+   background: url("../../assets/images/gradient_background.jpg") center/cover
+      no-repeat;
+   min-height: 100vh;
+   width: 100vw;
+   font-family: "Segoe UI", Helvetica, sans-serif;
+   overflow-x: hidden;
 }
 
 .page-heading {
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #fff;
-    font-size: 2.75rem;
-    letter-spacing: 3px;
+   text-transform: uppercase;
+   font-weight: 500;
+   color: #fff;
+   font-size: 2.75rem;
+   letter-spacing: 3px;
+   opacity: 1;
 }
 
 .heading-divider {
-    width: 150px;
-    height: 7px;
-    border-radius:9999px;
-    display:flex;
-    margin-top: .5em;
+   width: 150px;
+   height: 7px;
+   border-radius: 9999px;
+   display: flex;
+   margin-top: 0.5em;
+   opacity: 1;
 
-    .one, .two, .three {
-        width: 33.3%;
-        height: 100%;
-    }
+   .one,
+   .two,
+   .three {
+      width: 33.3%;
+      height: 100%;
+   }
 
-    .one {
-        background-color: #FF7E3D;
-        border-radius: 99px 0 0 99px;
-    }
+   .one {
+      background-color: #ff7e3d;
+      border-radius: 99px 0 0 99px;
+   }
 
-    .two {
-        background-color: #ca6330;
-    }
+   .two {
+      background-color: #ca6330;
+   }
 
-    .three {
-        background-color: #b4582b;
-        border-radius:  0 99px 99px 0;
-    }
+   .three {
+      background-color: #b4582b;
+      border-radius: 0 99px 99px 0;
+   }
 }
