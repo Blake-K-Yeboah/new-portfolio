@@ -23,6 +23,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .page-heading {
   text-transform: uppercase;
   font-weight: 500;
@@ -62,6 +66,18 @@ body {
 .heading-divider .three {
   background-color: #b4582b;
   border-radius: 0 99px 99px 0;
+}
+
+@media screen and (max-width: 1092px) {
+  .page-heading {
+    text-align: center;
+  }
+  .heading-divider {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 .watermark {
@@ -119,7 +135,7 @@ body {
 }
 
 .navbar .navbar-brand {
-  font-family: 'Shadows Into Light Two', serif;
+  font-family: "Shadows Into Light Two", serif;
   color: #fff;
   font-weight: normal;
   font-size: 2.5rem;
@@ -210,6 +226,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  list-style: none;
 }
 
 .mobile-menu .nav-list .nav-item {
@@ -378,8 +395,8 @@ body {
   padding: 16px 32px 16px 64px;
   border: none;
   border-radius: 3px;
-  -webkit-transition: background .3s ease-in-out, color .3s ease-in-out;
-  transition: background .3s ease-in-out, color .3s ease-in-out;
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
   position: relative;
   text-decoration: none;
@@ -393,10 +410,10 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: -webkit-filter .3s ease-in-out;
-  transition: -webkit-filter .3s ease-in-out;
-  transition: filter .3s ease-in-out;
-  transition: filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
 }
 
 .btn.primary {
@@ -434,6 +451,9 @@ body {
     padding: 12px 24px 12px 48px;
     font-size: 1.1vw;
   }
+  .btn.primary-outline {
+    padding: 10px 22px 10px 46px;
+  }
   .btn .icon {
     width: 1.5vw;
     left: 16px;
@@ -444,7 +464,10 @@ body {
 @media screen and (max-width: 912px) {
   .btn {
     padding: 16px 32px 16px 64px;
-    font-size: .85rem;
+    font-size: 0.85rem;
+  }
+  .btn.primary-outline {
+    padding: 14px 30px 14px 62px;
   }
   .btn .icon {
     width: 20px;
@@ -474,22 +497,21 @@ body {
 
 .projects .project .img-container {
   width: 100%;
-  height: calc(55vh - 8em);
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .projects .project .img-container .project-img {
-  width: 100%;
+  width: 90%;
   border-radius: 10px;
-  opacity: .95;
 }
 
 .projects .project .content {
@@ -540,7 +562,7 @@ body {
 .projects .project .content .skills-list .skill .skill-title {
   font-size: 1.2rem;
   color: #eee;
-  margin-left: .5em;
+  margin-left: 0.5em;
   font-weight: lighter;
 }
 
@@ -561,7 +583,8 @@ body {
   text-align: right;
 }
 
-.projects .project.alternate .content .project-description, .projects .project.alternate .content .skills-list {
+.projects .project.alternate .content .project-description,
+.projects .project.alternate .content .skills-list {
   margin-left: auto;
 }
 
@@ -569,6 +592,116 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media screen and (max-width: 1452px) {
+  .projects .project .content .project-description {
+    font-size: 1rem;
+    width: 90%;
+  }
+  .projects .project .content .project-title {
+    font-size: 1.85rem;
+  }
+  .projects .project .content .skills-heading {
+    font-size: 1.25rem;
+  }
+  .projects .project .content .skills-list .skill {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .project .content .skills-list .skill .skill-title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  .projects {
+    padding: 5vh 5vw;
+  }
+}
+
+@media screen and (max-width: 1092px) {
+  .projects .project {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+    row-gap: 4em;
+    border: none;
+    border-top: 10px solid #EE6B29;
+  }
+  .projects .project.alternate {
+    border: none;
+    border-top: 10px solid #EE6B29;
+  }
+  .projects .project.alternate .content * {
+    text-align: center;
+  }
+  .projects .project.alternate .content .skills-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .projects .project.alternate .content .skills-list .skill {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .projects .project.alternate .content .skills-list .skill .skill-title {
+    margin: 0;
+  }
+  .projects .project .content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .projects .project .content .project-title {
+    font-size: 2.25rem;
+  }
+  .projects .project .content .project-description {
+    font-size: 1.25rem;
+    margin: 1em auto;
+  }
+  .projects .project .content .skills-heading {
+    font-size: 1.5rem;
+  }
+  .projects .project .content .skills-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 50%;
+    margin-left: 25%;
+    row-gap: 2em;
+  }
+  .projects .project .content .skills-list .skill {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projects .project .content .skills-list .skill .checkmark {
+    display: none;
+  }
+  .projects .project .content .skills-list .skill .skill-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .projects .project .img-container .project-img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .projects .project .content .btn-group .btn {
+    display: block;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .projects .project .content .btn-group .btn:last-of-type {
+    margin: 2em auto 0 auto;
+  }
 }
 
 .footer {
@@ -615,6 +748,23 @@ body {
   position: absolute;
   bottom: 0;
   width: 100vw;
+}
+
+@media screen and (max-width: 532px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 125px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer .copyright-text {
+    font-size: 0.9rem;
+    margin-bottom: 2em;
+  }
 }
 
 .skills {
