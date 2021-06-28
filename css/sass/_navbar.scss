@@ -1,127 +1,128 @@
-@import 'variables';
+@import "variables";
 
 .navbar {
-    height: 150px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10vw;
-    line-height: 150px;
+   height: 150px;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 10vw;
+   line-height: 150px;
 
-    .navbar-brand {
-        font-family: 'Shadows Into Light Two', serif;
-        color: #fff;
-        font-weight: normal;
-        font-size: 2.5rem;
-        letter-spacing: 2px;
+   .navbar-brand {
+      font-family: "Shadows Into Light Two", serif;
+      color: #fff;
+      font-weight: normal;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
 
-        span {
-            color: $primary;
-        }
-    }
+      span {
+         color: $primary;
+      }
+   }
 
-    .nav-list {
-        display:flex;
-        flex-direction: row;
-        list-style: none;
+   .nav-list {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
 
-        .nav-item {
-            margin: 0 1em;
+      .nav-item {
+         margin: 0 1em;
 
-            .nav-link {
-                text-transform:uppercase;
-                color: $lightGrey;
-                text-decoration: none;
-                font-weight: 600;
-                letter-spacing: 0.5px;
-                transition: color 0.3s ease-in-out;
-                cursor: pointer;
-                
-                &.light {
-                    font-weight: lighter;
-                }
+         .nav-link {
+            text-transform: uppercase;
+            color: $lightGrey;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
 
-                &.active {
-                    color: $primary;
-                }
-
-                &:hover {
-                    color: $primary;
-                }
+            &.light {
+               font-weight: lighter;
             }
-        }
-    }
 
-    .menu-icon {
-        filter: invert(1);
-        display:none;
-        width: 40px;
-        margin-top:-15px;
-    }
+            &.active {
+               color: $primary;
+            }
+
+            &:hover {
+               color: $primary;
+            }
+         }
+      }
+   }
+
+   .menu-icon {
+      filter: invert(1);
+      display: none;
+      width: 40px;
+      margin-top: -15px;
+   }
 }
 
 .mobile-menu {
-    width:100vw;
-    height:100vh;
-    background: rgba(0,0,0,0.75);
-    position:absolute;
-    top:0;
-    left:0;
-    z-index: 1;
-    display:none;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.75);
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   display: none;
 
-    .close-icon {
-        color: #fff;
-        font-size: 2rem;
-        position:absolute;
-        right: 5vw;
-        top: 6vh;
-    }
+   .close-icon {
+      color: #fff;
+      font-size: 2rem;
+      position: absolute;
+      right: 5vw;
+      top: 6vh;
+   }
 
-    .nav-list {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+   .nav-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      list-style: none;
 
-        .nav-item {
-            margin: 1em 0;
+      .nav-item {
+         margin: 1em 0;
 
-            .nav-link {
-                text-transform:uppercase;
-                color: $lightGrey;
-                text-decoration: none;
-                font-weight: 600;
-                letter-spacing: 0.5px;
-                transition: color 0.3s ease-in-out;
-                cursor: pointer;
+         .nav-link {
+            text-transform: uppercase;
+            color: $lightGrey;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
 
-                &.active {
-                    color: $primary;
-                }
+            &.active {
+               color: $primary;
             }
-        }
-    }
+         }
+      }
+   }
 }
 
 @media screen and (max-width: 1112px) {
-    .navbar {
-        padding: 0 5vw;
+   .navbar {
+      padding: 0 5vw;
 
-        .nav-list {
-            display:none;
-        }
+      .nav-list {
+         display: none;
+      }
 
-        .menu-icon {
-            display:block;
-        }
-    }
+      .menu-icon {
+         display: block;
+      }
+   }
 }
 
 @media screen and (max-width: 662px) {
-    .navbar {
-        .navbar-brand {
-            font-size: 2rem;
-        }
-    }
+   .navbar {
+      .navbar-brand {
+         font-size: 2rem;
+      }
+   }
 }
