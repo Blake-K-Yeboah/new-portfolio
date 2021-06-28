@@ -1,70 +1,78 @@
 .btn {
-    padding: 16px 32px 16px 64px;
-    border: none;
-    border-radius: 3px;
-    transition: background .3s ease-in-out, color .3s ease-in-out;
-    cursor: pointer;
-    position:relative;
-    text-decoration: none;
+   padding: 16px 32px 16px 64px;
+   border: none;
+   border-radius: 3px;
+   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+   cursor: pointer;
+   position: relative;
+   text-decoration: none;
 
-    .icon {
-        filter: invert(1);
-        position:absolute;
-        left: 24px;
-        top:50%;
-        transform:translateY(-50%);
-        transition: filter .3s ease-in-out;
-    }
+   .icon {
+      filter: invert(1);
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: filter 0.3s ease-in-out;
+   }
 
-    &.primary {
-        color: #fff;
-        background: $primary;
+   &.primary {
+      color: #fff;
+      background: $primary;
 
-        &:hover {
-            background: lighten($primary, 7.5%);
-        }
-    }
+      &:hover {
+         background: lighten($primary, 7.5%);
+      }
+   }
 
-    &.primary-outline {
-        color: $primary;
-        border: 2px solid $primary;
-        padding: 14px 30px 14px 62px;
+   &.primary-outline {
+      color: $primary;
+      border: 2px solid $primary;
+      padding: 14px 30px 14px 62px;
 
-        .icon {
-            filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
-        }
+      .icon {
+         filter: invert(1) brightness(0.5) sepia(1) saturate(4000%);
+      }
 
-        &:hover {
-            background: $primary;
-            color: #fff;
-            .icon {
-                filter: invert(1);
-            }
-        }
-    }
+      &:hover {
+         background: $primary;
+         color: #fff;
+         .icon {
+            filter: invert(1);
+         }
+      }
+   }
 }
 
 @media screen and (max-width: 1374px) {
-    .btn {
-        padding: 12px 24px 12px 48px;
-        font-size: 1.1vw;
+   .btn {
+      padding: 12px 24px 12px 48px;
+      font-size: 1.1vw;
 
-        .icon {
-            width: 1.5vw;
-            left: 16px;
-            width: 2vw;
-        }
-    }
+      &.primary-outline {
+         padding: 10px 22px 10px 46px;
+      }
+
+      .icon {
+         width: 1.5vw;
+         left: 16px;
+         width: 2vw;
+      }
+   }
 }
 
 @media screen and (max-width: 912px) {
-    .btn {
-        padding: 16px 32px 16px 64px;
-        font-size: .85rem;
+   .btn {
+      padding: 16px 32px 16px 64px;
+      font-size: 0.85rem;
 
-        .icon {
-            width: 20px;
-            left: 24px;
-        }
-    }
+      &.primary-outline {
+         padding: 14px 30px 14px 62px;
+      }
+
+      .icon {
+         width: 20px;
+         left: 24px;
+      }
+   }
 }
