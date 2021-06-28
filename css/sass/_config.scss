@@ -30,6 +30,10 @@ body {
    overflow-x: hidden;
 }
 
+html {
+   overflow-x: hidden;
+}
+
 .page-heading {
    text-transform: uppercase;
    font-weight: 500;
@@ -66,5 +70,17 @@ body {
    .three {
       background-color: #b4582b;
       border-radius: 0 99px 99px 0;
+   }
+}
+
+@media screen and (max-width: 1092px) {
+   .page-heading {
+      text-align: center;
+   }
+
+   .heading-divider {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
    }
 }
