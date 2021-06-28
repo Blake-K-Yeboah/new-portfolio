@@ -34,3 +34,16 @@
       width: 100vw;
    }
 }
+
+@media screen and (max-width: 532px) {
+   .footer {
+      flex-direction: column;
+      height: 125px;
+      justify-content: center;
+
+      .copyright-text {
+         font-size: 0.9rem;
+         margin-bottom: 2em;
+      }
+   }
+}
