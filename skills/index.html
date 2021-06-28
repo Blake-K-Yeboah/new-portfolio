@@ -51,7 +51,7 @@
 
             <li class="nav-item">
 
-                <a href="#" class="nav-link light">Resume</a>
+                <a href="/resume" class="nav-link light">Resume</a>
 
             </li>
 
@@ -99,7 +99,7 @@
 
             <li class="nav-item">
 
-                <a href="#" class="nav-link light">Resume</a>
+                <a href="/resume" class="nav-link light">Resume</a>
 
             </li>
 
@@ -119,7 +119,7 @@
         
         <div class="skills-grid">
             <div class="skill-group">
-                <img src="../assets/icons/monitor.svg" alt="Monitor Icon" class="icon">
+                <img src="../assets/icons/monitor.svg" alt="Monitor Icon" class="icon skill-icon">
                 <div class="content">
                     <h3 class="skill-group-title">Front End</h3>
                     <div class="skills-list">
@@ -134,7 +134,7 @@
                 </div>
             </div>
             <div class="skill-group second">
-                <img src="../assets/icons/terminal.svg" alt="Monitor Icon" class="icon">
+                <img src="../assets/icons/terminal.svg" alt="Monitor Icon" class="icon skill-icon">
                 <div class="content">
                     <h3 class="skill-group-title">Back End</h3>
                     <div class="skills-list">
@@ -146,7 +146,7 @@
                 </div>
             </div>
             <div class="skill-group third">
-                <img src="../assets/icons/tool.svg" alt="Monitor Icon" class="icon">
+                <img src="../assets/icons/tool.svg" alt="Monitor Icon" class="icon skill-icon">
                 <div class="content">
                     <h3 class="skill-group-title">Tools</h3>
                     <div class="skills-list">
@@ -179,6 +179,18 @@
         crossorigin="anonymous"></script>
     
     <script>
+        
+        // LOAD IN ANIMATION
+        let tl = gsap.timeline({ defaults: { duration: 1 } });
+
+        tl.from('.navbar-brand', { opacity: 0, y: -100 })
+            .from('.nav-item', { opacity: 0, x: -30, stagger: 0.25 }, '-=1.5')
+            .from('.page-heading', { opacity: 0, x: -30 }, "-=3")
+            .from('.heading-divider', { opacity: 0, duration: 2 }, "-=2.75")
+            .from('.skill-icon', { opacity: 0, x: -30 }, "-=2.5")
+            .from('.skill-group-title', { opacity: 0, x: -30 }, "-=2")
+            .from('.skill', { opacity: 0, x: -30, stagger: 0.15 }, '-=3')
+            .from('.footer', {opacity: 0, x: -50}, "-=3.5")
     
         // Mobile Navigation
         document.getElementById("menu-icon").addEventListener('click', () => {
