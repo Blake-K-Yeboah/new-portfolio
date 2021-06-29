@@ -1,0 +1,26 @@
+.resume {
+   padding: 5vh 10vw;
+
+   .resume-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .content {
+         .text {
+            color: #eee;
+            font-size: 1.5rem;
+            margin: 4em 0 3em;
+            font-weight: 300;
+         }
+         .btn-group .btn:last-of-type {
+            margin-left: 1em;
+         }
+      }
+
+      .resume-img {
+         position: relative;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+}
