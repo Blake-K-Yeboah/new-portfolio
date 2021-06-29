@@ -955,4 +955,33 @@ html {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+
+.resume {
+  padding: 5vh 10vw;
+}
+
+.resume .resume-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.resume .resume-grid .content .text {
+  color: #eee;
+  font-size: 1.5rem;
+  margin: 4em 0 3em;
+  font-weight: 300;
+}
+
+.resume .resume-grid .content .btn-group .btn:last-of-type {
+  margin-left: 1em;
+}
+
+.resume .resume-grid .resume-img {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
 /*# sourceMappingURL=main.css.map */
