@@ -35,6 +35,11 @@
    }
 }
 
+@media screen and (max-width: 1095px) {
+   .footer.sticky {
+      position: relative;
+   }
+}
 @media screen and (max-width: 532px) {
    .footer {
       flex-direction: column;
