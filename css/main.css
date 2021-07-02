@@ -68,7 +68,7 @@ html {
   border-radius: 0 99px 99px 0;
 }
 
-@media screen and (max-width: 1092px) {
+@media screen and (max-width: 1112px) {
   .page-heading {
     text-align: center;
   }
@@ -306,7 +306,7 @@ html {
   margin-bottom: 6vh;
   line-height: 1.75;
   color: #D6D6D6;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
 }
 
 @media screen and (max-width: 1208px) {
@@ -319,12 +319,6 @@ html {
 }
 
 @media screen and (max-width: 1112px) {
-  .header-grid .content {
-    padding: 0 5vw;
-  }
-}
-
-@media screen and (max-width: 932px) {
   .header-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -332,6 +326,7 @@ html {
   }
   .header-grid .content {
     margin-top: 5vh;
+    padding: 0 5vw;
   }
   .header-grid .content .header-title {
     text-align: center;
@@ -618,9 +613,6 @@ html {
   .projects {
     padding: 5vh 5vw;
   }
-}
-
-@media screen and (max-width: 1092px) {
   .projects .project {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -749,7 +741,7 @@ html {
   width: 100vw;
 }
 
-@media screen and (max-width: 1095px) {
+@media screen and (max-width: 1200px) {
   .footer.sticky {
     position: relative;
   }
@@ -824,7 +816,7 @@ html {
   border-radius: 999px;
 }
 
-@media screen and (max-width: 1095px) {
+@media screen and (max-width: 1112px) {
   .skills .skills-grid .skill-group {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -915,7 +907,7 @@ html {
   min-width: 300px;
 }
 
-@media screen and (max-width: 1094px) {
+@media screen and (max-width: 1112px) {
   .about .about-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1045,7 +1037,7 @@ html {
   }
 }
 
-@media screen and (max-width: 1094px) {
+@media screen and (max-width: 1112px) {
   .contact .contact-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1123,7 +1115,7 @@ html {
   }
 }
 
-@media screen and (max-width: 1094px) {
+@media screen and (max-width: 1112px) {
   .resume .resume-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
