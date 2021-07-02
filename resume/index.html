@@ -154,6 +154,17 @@
 
     <script>
 
+        // LOAD IN ANIMATION
+        let tl = gsap.timeline({ defaults: { duration: 1 } });
+
+        tl.from('.navbar-brand', { opacity: 0, y: -100 })
+            .from('.nav-item', { opacity: 0, x: -30, stagger: 0.25 }, '-=1.5')
+            .from('.page-heading', { opacity: 0, x: -30 }, "-=3")
+            .from('.heading-divider', { opacity: 0, duration: 2 }, "-=2.75")
+            .from('.resume-grid .content', { opacity: 0, x: -30 }, "-=2.5")
+            .from('.resume-img', { opacity: 0, x: 30 }, "-=2.5")
+            .from('.footer', {opacity: 0, x: -50}, "-=2.5")
+
         // Mobile Navigation
         document.getElementById("menu-icon").addEventListener('click', () => {
             document.querySelector('.mobile-menu').style.display = "block";
