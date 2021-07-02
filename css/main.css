@@ -736,12 +736,12 @@ html {
 }
 
 .footer.sticky {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100vw;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1112px) {
   .footer.sticky {
     position: relative;
   }
@@ -761,6 +761,13 @@ html {
   .footer .copyright-text {
     font-size: 0.9rem;
     margin-bottom: 2em;
+  }
+}
+
+@media screen and (max-height: 780px) and (min-width: 533px) {
+  .footer {
+    height: 75px;
+    min-height: 0;
   }
 }
 
