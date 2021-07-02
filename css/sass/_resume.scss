@@ -24,3 +24,48 @@
       }
    }
 }
+
+@media screen and (max-width: 1368px) {
+   .resume .resume-grid .resume-img {
+      width: 60%;
+   }
+}
+
+@media screen and (max-width: 1094px) {
+   .resume .resume-grid {
+      grid-template-columns: 1fr;
+      row-gap: 6em;
+
+      .content {
+         text-align: center;
+      }
+
+      .resume-img {
+         width: 40%;
+      }
+   }
+}
+
+@media screen and (max-width: 608px) {
+   .resume .resume-grid {
+      .resume-img {
+         width: 55%;
+      }
+
+      .content {
+         .btn-group {
+            width: 50vw;
+            min-width: 250px;
+            margin: 0 auto;
+
+            .btn {
+               display: block;
+
+               &:last-of-type {
+                  margin: 2em 0 0 0;
+               }
+            }
+         }
+      }
+   }
+}
