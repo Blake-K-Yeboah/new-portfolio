@@ -131,11 +131,6 @@
 @media screen and (max-width: 1112px) {
    .projects {
       padding: 5vh 5vw;
-   }
-}
-
-@media screen and (max-width: 1092px) {
-   .projects {
       .project {
          grid-template-columns: 1fr;
          text-align: center;
