@@ -33,3 +33,28 @@
       }
    }
 }
+
+@media screen and (max-width: 1094px) {
+   .about .about-grid {
+      grid-template-columns: 1fr;
+      row-gap: 4em;
+
+      .content {
+         align-items: center;
+         text-align: center;
+         padding-top: 2em;
+      }
+   }
+}
+
+@media screen and (max-width: 532px) {
+   .about .about-grid {
+      .content .text {
+         font-size: 1.25rem;
+      }
+      .about-img {
+         width: 50vw;
+         min-width: 0;
+      }
+   }
+}
