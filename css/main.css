@@ -1111,7 +1111,7 @@ html {
 
 .resume .resume-grid .resume-img {
   position: relative;
-  left: 50%;
+  left: 30%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
